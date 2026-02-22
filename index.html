@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vision - Agência de Marketing</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- MENU HAMBURGUER -->
+    <div class="menu-toggle" id="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <!-- MENU LATERAL -->
+    <nav class="sidebar" id="sidebar">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#sobre">Quem Somos</a></li>
+            <li><a href="#processo">O que Fazemos</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+    </nav>
+
+    <!-- OVERLAY -->
+    <div class="overlay" id="overlay"></div>
+
+    <!-- HERO -->
+    <header id="home">
+        <div class="container">
+
+            <img src="imagens/logo.jpeg" alt="Logo Vision" class="logo-topo">
+
+            <h1>Transforme seu salão em uma máquina de agendamentos</h1>
+
+            <p>
+                Criamos estratégias digitais que posicionam seu salão como autoridade,
+                atraem clientes qualificados diariamente e transformam seu Instagram
+                em um verdadeiro canal de vendas.
+            </p>
+
+            <a href="https://wa.me/5531998543251" target="_blank" class="btn">
+                Quero Mais Clientes
+            </a>
+
+        </div>
+    </header>
+
+    <!-- SOBRE -->
+    <section class="quem-somos">
+  <h2>Quem Somos</h2>
+
+  <p>Somos uma agência especializada em crescimento estratégico para salões de beleza.</p>
+
+  <p>Nosso propósito é simples: transformar redes sociais em máquinas previsíveis de agendamentos.</p>
+
+  <p>Acreditamos que um salão não deve depender apenas de indicações ou da sorte para ter a agenda cheia.</p>
+
+  <p>Por isso, unimos marketing digital, posicionamento estratégico e execução profissional para gerar resultados reais e consistentes.</p>
+
+  <p><strong>Não fazemos apenas postagens bonitas.</strong></p>
+
+  <p>Criamos estratégias inteligentes que aumentam visibilidade, fortalecem sua autoridade local e atraem as clientes certas — todos os dias.</p>
+
+  <p><strong>Planejamos. Executamos. Analisamos. Otimizamos.</strong></p>
+
+  <p>Cada ação tem um único objetivo: aumentar seus agendamentos e seu faturamento.</p>
+  
+  <p><strong>Se você quer parar de depender de meses bons e ruins e começar a ter crescimento previsível, está no lugar certo.</strong></p>
+</section>
+
+    <!-- PROCESSO -->
+    <section class="processo-servicos" id="processo">
+        <div class="container">
+
+            <h2 class="titulo-processo">
+                O que <span>fazemos?</span>
+            </h2>
+
+            <div class="processo-grid">
+                <div class="item">
+                    <div class="circulo">🧠</div>
+                    <h3>Planejamos</h3>
+                </div>
+                <div class="item">
+                    <div class="circulo">🔍</div>
+                    <h3>Pesquisamos</h3>
+                </div>
+                <div class="item">
+                    <div class="circulo">💡</div>
+                    <h3>Inovamos</h3>
+                </div>
+                <div class="item">
+                    <div class="circulo">📈</div>
+                    <h3>Otimizamos</h3>
+                </div>
+                <div class="item">
+                    <div class="circulo">⚙</div>
+                    <h3>Executamos</h3>
+                </div>
+            </div>
+
+            <div class="linha-divisoria"></div>
+
+            <h3 class="titulo-servicos">O Que Fazemos</h3>
+
+            <div class="cards">
+                <div class="card">
+                    <h4>Gestão de Instagram</h4>
+                    <p>Conteúdo estratégico que gera autoridade e novos agendamentos.</p>
+                </div>
+                <div class="card">
+                    <h4>Tráfego Pago</h4>
+                    <p>Anúncios inteligentes para lotar sua agenda todos os meses.</p>
+                </div>
+                <div class="card">
+                    <h4>Estratégia de Crescimento</h4>
+                    <p>Planejamento focado em faturamento previsível e crescimento sustentável.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- CONTATO -->
+    <section id="contato" class="cta">
+        <div class="container">
+            <h2>Pronto para transformar seu salão?</h2>
+
+            <a href="https://wa.me/5531998543251" target="_blank" class="btn">
+                Entrar em Contato
+            </a>
+        </div>
+    </section>
+
+   <footer class="footer">
+  <div class="footer-container">
+    
+    <div class="footer-info">
+      <h3>Fale Conosco</h3>
+      <p>Email: comercialvisionn@gmail.com</p>
+      <p>Telefone: (31) 99854-3251</p>
+    </div>
+
+    </div>
+
+  </div>
+
+  <div class="footer-copy">
+    © 2026 Seu Site - Todos os direitos reservados.
+  </div>
+</footer>
+
+<!-- WHATSAPP FLUTUANTE -->
+<a href="https://wa.me/5531998543251"
+   class="whatsapp-float"
+   target="_blank">
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png"
+         alt="WhatsApp">
+</a>
+
+    <script>
+        const toggle = document.getElementById('menu-toggle');
+        const sidebar = document.getElementById('sidebar');
+        const overlay = document.getElementById('overlay');
+        const links = document.querySelectorAll('.sidebar a');
+
+        toggle.addEventListener('click', () => {
+            toggle.classList.toggle('active');
+            sidebar.classList.toggle('active');
+            overlay.classList.toggle('active');
+        });
+
+        overlay.addEventListener('click', closeMenu);
+
+        links.forEach(link => {
+            link.addEventListener('click', closeMenu);
+        });
+
+        function closeMenu() {
+            toggle.classList.remove('active');
+            sidebar.classList.remove('active');
+            overlay.classList.remove('active');
+        }
+    </script>
+<a href="#" class="back-to-top">↑</a>
+</body>
+</html>

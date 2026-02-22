@@ -1,0 +1,313 @@
+/* ================= RESET ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #ffffff;
+    color: #2d2d2d;
+    scroll-behavior: smooth;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+/* MENU */
+
+.menu-toggle {
+    position: fixed;
+    top: 25px;
+    right: 25px;
+    cursor: pointer;
+    z-index: 1100;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background: #6a0dad;
+    margin: 6px 0;
+    transition: 0.4s ease;
+    border-radius: 5px;
+}
+
+.menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+    background: white;
+}
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+    background: white;
+}
+
+.sidebar {
+    position: fixed;
+    right: -280px;
+    top: 0;
+    width: 280px;
+    height: 100vh;
+    background: linear-gradient(180deg, #6a0dad, #4b0082);
+    padding-top: 120px;
+    transition: 0.5s cubic-bezier(.77,0,.18,1);
+    z-index: 1050;
+    box-shadow: -10px 0 40px rgba(0,0,0,0.3);
+}
+
+.sidebar.active {
+    right: 0;
+}
+
+.sidebar ul {
+    list-style: none;
+    text-align: center;
+}
+
+.sidebar ul li {
+    margin: 30px 0;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+    position: relative;
+    transition: 0.3s;
+}
+
+.sidebar ul li a::after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    background: #e9d5ff;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.3s;
+}
+
+.sidebar ul li a:hover::after {
+    width: 100%;
+}
+
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+    backdrop-filter: blur(3px);
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.4s ease;
+    z-index: 1000;
+}
+
+.overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+/* RESTANTE DO SITE */
+
+header {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #ffffff, #f3e8ff);
+}
+
+.logo-topo {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+h1 {
+    font-size: 34px;
+    color: #4b0082;
+    margin-bottom: 20px;
+}
+
+header p {
+    max-width: 700px;
+    margin: auto;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #555;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 14px 32px;
+    background: #6a0dad;
+    color: white;
+    text-decoration: none;
+    border-radius: 40px;
+    font-weight: 600;
+    transition: 0.3s ease;
+    box-shadow: 0 8px 20px rgba(106, 13, 173, 0.25);
+}
+
+.btn:hover {
+    background: #4b0082;
+    transform: translateY(-4px);
+}
+
+section {
+    padding: 100px 20px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 30px;
+    color: #6a0dad;
+    margin-bottom: 30px;
+}
+
+.processo-servicos {
+    background: #faf5ff;
+}
+
+.processo-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.circulo {
+    width: 80px;
+    height: 80px;
+    background: #f3e8ff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    margin: auto;
+    transition: 0.3s ease;
+}
+
+.circulo:hover {
+    background: #6a0dad;
+    color: white;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.card {
+    background: white;
+    padding: 30px;
+    width: 280px;
+    border-radius: 18px;
+    box-shadow: 0 15px 40px rgba(106, 13, 173, 0.15);
+    transition: 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.cta {
+    background: linear-gradient(135deg, #6a0dad, #4b0082);
+    color: white;
+}
+
+.cta {
+    background: #4b0082; /* Roxo sólido, sem gradiente */
+    color: #ffffff;
+    padding: 100px 20px;
+}
+
+.cta h2 {
+    color: #ffffff;
+    font-weight: 700;
+    opacity: 1;
+}
+
+.cta p {
+    color: #e9d5ff;
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.cta .btn {
+    background: #ffffff;
+    color: #4b0082;
+    border: none;
+    opacity: 1;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+}
+
+.cta .btn:hover {
+    background: #f3e8ff;
+    transform: translateY(-4px);
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    background: #3b0764;
+    color: white;
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background-color: #591287;
+  color: #fff;
+  text-decoration: none;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 20px;
+  z-index: 9999;
+  transition: 0.3s;
+}
+
+.back-to-top:hover {
+  background-color: #ff4d4d;
+}
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 65px;
+    height: 65px;
+    z-index: 999;
+}
+
+.whatsapp-float img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    transition: 0.3s ease;
+}
+
+.whatsapp-float img:hover {
+    transform: scale(1.1);
+}
